@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Actions One
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    branches-ignore:
+      - "production-cd"
+      - "staging-cd"
+      - "development-cd"
+      
+  pull_request:
+    branches: [ main ]
+    
+concurrency:
+  group: actions-one
+  cancel-in-progress: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Output Ref
+        run: echo "${{ github.ref }}"
+
+      - name: Output HeadRef
+        run: echo "${{ github.head_ref }}"
+
+      # Runs a set of commands using the runners shell
+      - name: Build simulation
+        run: |
+          echo "Starting code build."
+          sleep 2m
+          echo "Finish code build."
