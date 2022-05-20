@@ -32,6 +32,9 @@ jobs:
 
       - name: Output HeadRef
         run: echo "${{ github.head_ref }}"
+        
+      - name: Output Workflow
+        run: echo "${{ github.workflow }}"
 
       # Runs a set of commands using the runners shell
       - name: Build simulation
