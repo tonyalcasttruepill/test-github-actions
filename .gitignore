@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+#new type to ignore8
+.asxdffgcg
+
 #new type to ignore
 .asxd
 
