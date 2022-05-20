@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# another file type
+.lkjal
+
 # new file type
 .asdasd
 
