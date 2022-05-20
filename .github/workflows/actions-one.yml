@@ -15,7 +15,7 @@ on:
     branches: [ main ]
     
 concurrency:
-  group: actions-one
+  group: actions-one-${{ github.ref }}
   cancel-in-progress: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
